@@ -37,14 +37,14 @@ const skills = [
       "Terbiasa menjelaskan materi teknis ke audiens awal — dari ruang kelas sampai dokumentasi proyek.",
     stack: ["Mengajar", "Public speaking", "Dokumentasi"],
     tiles: ["TR", "PS", "DO"],
-    span: "md:col-span-2",
+    span: "",
   },
 ];
 
 /** Keahlian: bento + kartu monogram, gaya v1 (rounded-lg, border halus). */
 export function Skills() {
   return (
-    <section id="keahlian" className="mx-auto max-w-[100rem] px-6 pb-24">
+    <section id="keahlian" className="mx-auto max-w-[100rem] px-6 pb-16 pt-16">
       <div className="flex items-center gap-3">
         <span className="rounded-lg border border-accent-emerald/20 bg-accent-emerald/10 p-2">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-emerald">
@@ -91,21 +91,6 @@ export function Skills() {
             </p>
           </article>
         ))}
-
-        {/* Kartu Pendidikan */}
-        <article className="flex flex-col rounded-card border border-border bg-card p-6 hover:border-accent-emerald/50">
-          <ul className="flex gap-2">
-            <li className="flex h-10 w-10 items-center justify-center rounded-lg bg-dark-card font-mono text-xs font-medium text-accent-emerald">
-              UNJ
-            </li>
-          </ul>
-          <h3 className="mt-5 text-lg font-bold text-foreground sm:text-xl">
-            S1 Pendidikan Informatika
-          </h3>
-          <p className="mt-2 font-mono text-xs text-muted-foreground">
-            Universitas Negeri Jakarta · 2020–2025
-          </p>
-        </article>
       </div>
     </section>
   );

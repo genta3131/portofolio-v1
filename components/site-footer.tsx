@@ -10,7 +10,7 @@ const navLinks = [
 export function SiteFooter() {
   return (
     <footer id="kontak" className="relative overflow-hidden bg-dark text-dark-foreground">
-      <div className="mx-auto grid max-w-[100rem] gap-12 px-6 pb-24 pt-28 md:grid-cols-2">
+      <div className="mx-auto grid max-w-[100rem] gap-12 px-6 pb-16 pt-20 md:grid-cols-2">
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-emerald">
             Kontak

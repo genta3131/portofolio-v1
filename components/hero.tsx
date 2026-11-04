@@ -17,7 +17,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid max-w-[100rem] items-center gap-10 px-6 pb-20 pt-24 md:grid-cols-[1.4fr_1fr] md:gap-12 md:pb-28 md:pt-36">
+      <div className="relative mx-auto grid max-w-[100rem] items-center gap-10 px-6 pb-16 pt-20 md:grid-cols-[1.4fr_1fr] md:gap-12 md:pb-20 md:pt-28">
         {/* Foto — pertama di mobile (atas), kanan di desktop */}
         <div className="order-1 justify-self-center md:order-2 md:justify-self-end">
           <img

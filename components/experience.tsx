@@ -23,6 +23,14 @@ const experience = [
       "Merancang prototipe produk digital, termasuk platform relawan & event.",
     current: false,
   },
+  {
+    role: "S1 Pendidikan Informatika",
+    org: "Universitas Negeri Jakarta",
+    period: "2020–2025",
+    detail:
+      "Fokus pada pengembangan perangkat lunak dan sistem informasi; lulus dengan proyek akhir berupa sistem manajemen risiko.",
+    current: false,
+  },
 ];
 
 /** Pengalaman: timeline vertikal seperti v1. */
@@ -30,7 +38,7 @@ export function Experience() {
   return (
     <section
       id="pengalaman"
-      className="border-y border-border/40 bg-card/50 py-24"
+      className="border-y border-dark-border/60 py-16"
     >
       <div className="mx-auto max-w-[100rem] px-6">
         <div className="flex items-center gap-3">
@@ -41,7 +49,7 @@ export function Experience() {
             </svg>
           </span>
           <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Pengalaman Kerja
+            Pengalaman &amp; Pendidikan
           </h2>
         </div>
 

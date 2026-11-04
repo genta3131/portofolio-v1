@@ -9,14 +9,8 @@ export function SiteHeader() {
   return (
     /* di mobile disembunyikan — navigasi hanya via dock bawah */
     <header className="fixed inset-x-0 top-4 z-40 hidden md:block">
-      <div className="mx-auto flex max-w-[100rem] items-center justify-between">
-        <a
-          href="/"
-          className="rounded-pill bg-dark/90 py-2.5 pl-5 pr-5 font-mono text-sm font-bold text-dark-foreground outline outline-1 outline-dark-border"
-        >
-          genta:<span className="text-accent-emerald">~</span>
-        </a>
-        <nav className="hidden gap-1 rounded-pill bg-dark/90 px-3 py-2 outline outline-1 outline-dark-border md:flex">
+      <div className="mx-auto flex max-w-[100rem] justify-end">
+        <nav className="flex gap-1 rounded-pill border border-dark-border bg-dark-card/95 px-3 py-2">
           {links.map((l) => (
             <a
               key={l.href}

@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* ── Dark mode via class ────────────────────────────────────────────── */
+@custom-variant dark (&:is(.dark *));
+
+/* ── Design tokens — genta design system (dari portofolio v1) ───────── */
+:root {
+  /* light theme */
+  --background: #f9fafb;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #f3f4f6;
+  --accent-emerald: #10b981; /* aksen utama v1 */
+  --destructive: #ff2d20;
+  --border: #e5e7eb;
+  --dark: #080b10;           /* hero / footer island */
+  --dark-card: #0d1117;
+  --dark-foreground: #f1f5f9;
+  --dark-border: #1e2533;
+}
+
+.dark {
+  --background: #080b10;
+  --foreground: #f1f5f9;
+  --card: #0d1117;
+  --card-foreground: #f1f5f9;
+  --muted: #111827;
+  --muted-foreground: #94a3b8;
+  --accent: #161d2b;
+  --border: #1e2533;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-emerald: var(--accent-emerald);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-dark: var(--dark);
+  --color-dark-card: var(--dark-card);
+  --color-dark-foreground: var(--dark-foreground);
+  --color-dark-border: var(--dark-border);
+
+  /* Typography: sans sistem (v1 tanpa font kustom) + mono untuk aksen dev */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius-card: 1rem;
+  --radius-pill: 2rem;
+}
+
+html {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* ── Motion ─────────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@keyframes gradientflow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+.gradient-strip {
+  animation: gradientflow 18s linear infinite;
+  filter: blur(24px);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gradient-strip {
+    animation: none;
+  }
+}

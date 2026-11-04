@@ -34,7 +34,8 @@ export function Dock() {
   }, []);
 
   return (
-    <nav className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
+    /* hanya di mobile — desktop pakai nav pill di atas */
+    <nav className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 md:hidden">
       <div className="flex items-center gap-1.5 rounded-pill bg-background/90 px-3 py-2 shadow-none outline outline-1 outline-black/10 backdrop-blur-sm">
         {items.map((item) => {
           const isActive = active === item.id;

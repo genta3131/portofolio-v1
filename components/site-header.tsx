@@ -7,7 +7,8 @@ const links = [
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-4 z-40">
+    /* di mobile disembunyikan — navigasi hanya via dock bawah */
+    <header className="fixed inset-x-0 top-4 z-40 hidden md:block">
       <div className="mx-auto flex max-w-[100rem] items-center justify-between">
         <a
           href="/"

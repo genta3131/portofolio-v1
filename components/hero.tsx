@@ -1,4 +1,5 @@
-/** Hero dark ala v1: aksen emerald, badge status, avatar. */
+/** Hero dark ala v1: aksen emerald, badge status, avatar.
+ *  Mobile: foto di atas (seperti udara si Handoko), teks di bawah. */
 export function Hero() {
   return (
     <section
@@ -16,12 +17,21 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid max-w-[100rem] items-center gap-12 px-6 pb-28 pt-36 md:grid-cols-[1.4fr_1fr]">
-        <div>
+      <div className="relative mx-auto grid max-w-[100rem] items-center gap-10 px-6 pb-20 pt-24 md:grid-cols-[1.4fr_1fr] md:gap-12 md:pb-28 md:pt-36">
+        {/* Foto — pertama di mobile (atas), kanan di desktop */}
+        <div className="order-1 justify-self-center md:order-2 md:justify-self-end">
+          <img
+            src="/genta.png"
+            alt="Genta Abdi Fathir"
+            className="h-40 w-40 rounded-full border-2 border-accent-emerald/30 object-cover md:h-80 md:w-80"
+          />
+        </div>
+
+        <div className="order-2 md:order-1">
           <p className="font-mono text-sm text-accent-emerald">
             <span className="text-dark-foreground/50">~$</span> whoami
           </p>
-          <h1 className="mt-4 font-sans text-[clamp(2.5rem,7vw,5.5rem)] font-bold leading-[1.05] tracking-tight">
+          <h1 className="mt-4 font-sans text-[clamp(2.25rem,9vw,5.5rem)] font-bold leading-[1.05] tracking-tight">
             Genta Abdi Fathir
           </h1>
           <p className="mt-2 font-mono text-sm text-dark-foreground/60">
@@ -55,14 +65,6 @@ export function Hero() {
               Jakarta, Indonesia
             </span>
           </div>
-        </div>
-
-        <div className="justify-self-center md:justify-self-end">
-          <img
-            src="/genta.png"
-            alt="Genta Abdi Fathir"
-            className="h-64 w-64 rounded-full border-2 border-accent-emerald/30 object-cover md:h-80 md:w-80"
-          />
         </div>
       </div>
     </section>

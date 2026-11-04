@@ -9,7 +9,7 @@ const navLinks = [
 /** Kontak + footer gelap: marquee nama & strip gradient (palet genta). */
 export function SiteFooter() {
   return (
-    <footer id="kontak" className="relative overflow-hidden bg-dark text-dark-foreground">
+    <footer id="kontak" className="relative overflow-hidden border-t border-dark-border/60 bg-dark text-dark-foreground">
       <div className="mx-auto grid max-w-[100rem] gap-12 px-6 pb-16 pt-20 md:grid-cols-2">
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-emerald">
@@ -20,7 +20,7 @@ export function SiteFooter() {
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-dark-foreground/70">
             Diskusi soal backend, Laravel, sistem manajemen risiko, atau ajakan
-            berguru informatika — kirim email atau sapa lewat GitHub.
+            berguru informatika, kirim email atau sapa lewat GitHub.
           </p>
           <a
             href="mailto:gentaabdi31@gmail.com"

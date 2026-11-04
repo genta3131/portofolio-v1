@@ -1,7 +1,7 @@
 const works = [
   {
     kind: "Case Study",
-    title: "SimRisk — Sistem Manajemen Risiko",
+    title: "SimRisk: Sistem Manajemen Risiko",
     description:
       "Platform manajemen risiko skala enterprise untuk Universitas Negeri Jakarta: identifikasi, penilaian, dan pemantauan risiko unit kerja. Dibangun dengan Laravel 12 dan REST API.",
     stack: [

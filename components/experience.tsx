@@ -2,7 +2,7 @@ const experience = [
   {
     role: "Backend Developer Intern",
     org: "PUSTIKOM UNJ",
-    period: "2024–2025",
+    period: "2025",
     detail:
       "Merancang dan mengembangkan SimRisk: REST API 30+ endpoint, 22 migrations, RBAC Spatie, serta autentikasi JWT/SSO Microsoft.",
     current: false,
@@ -10,10 +10,10 @@ const experience = [
   {
     role: "Guru Informatika (Part-Time)",
     org: "SMA Negeri 53 Jakarta",
-    period: "2024–Sekarang",
+    period: "2025",
     detail:
       "Mengajar materi pemrograman dan informatika dasar untuk siswa tingkat lanjut.",
-    current: true,
+    current: false,
   },
   {
     role: "UI/UX Designer",
@@ -26,7 +26,7 @@ const experience = [
   {
     role: "S1 Pendidikan Informatika",
     org: "Universitas Negeri Jakarta",
-    period: "2020–2025",
+    period: "2022–2026",
     detail:
       "Fokus pada pengembangan perangkat lunak dan sistem informasi; lulus dengan proyek akhir berupa sistem manajemen risiko.",
     current: false,

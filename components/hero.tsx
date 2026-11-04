@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="beranda"
-      className="relative overflow-hidden bg-dark text-dark-foreground"
+      className="relative overflow-hidden border-b border-dark-border/60 bg-dark text-dark-foreground"
     >
       {/* grid halus ala dev, tanpa glow */}
       <div

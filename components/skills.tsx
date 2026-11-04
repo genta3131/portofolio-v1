@@ -34,7 +34,7 @@ const skills = [
   {
     title: "Komunikasi Teknis",
     description:
-      "Terbiasa menjelaskan materi teknis ke audiens awal — dari ruang kelas sampai dokumentasi proyek.",
+      "Terbiasa menjelaskan materi teknis ke audiens awal, dari ruang kelas sampai dokumentasi proyek.",
     stack: ["Mengajar", "Public speaking", "Dokumentasi"],
     tiles: ["TR", "PS", "DO"],
     span: "",

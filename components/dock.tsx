@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useActiveSection } from "@/components/use-active-section";
 
 const items = [
   { id: "beranda", label: "Beranda", href: "/" },
@@ -10,31 +10,13 @@ const items = [
   { id: "kontak", label: "Kontak", href: "#kontak" },
 ];
 
-/** Dock navigasi mengambang ala situs asli, dengan state aktif. */
-export function Dock() {
-  const [active, setActive] = useState("beranda");
+const ids = items.map((i) => i.id);
 
-  useEffect(() => {
-    const onScroll = () => {
-      const fromTop = window.scrollY + window.innerHeight / 2;
-      let current = "beranda";
-      for (const item of items) {
-        if (item.id === "beranda") continue;
-        const el = document.getElementById(item.id);
-        if (el && el.offsetTop <= fromTop) current = item.id;
-      }
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        current = "kontak";
-      }
-      setActive(current);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+/** Dock navigasi mengambang (mobile): nav pill di atas ganti tugasnya di desktop. */
+export function Dock() {
+  const [active, setActive] = useActiveSection(ids);
 
   return (
-    /* hanya di mobile — desktop pakai nav pill di atas */
     <nav className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 md:hidden">
       <div className="flex items-center gap-1.5 rounded-pill border border-dark-border bg-dark-card/95 px-3 py-2 backdrop-blur-sm">
         {items.map((item) => {
@@ -44,6 +26,8 @@ export function Dock() {
               key={item.id}
               href={item.href}
               aria-label={item.label}
+              aria-current={isActive ? "true" : undefined}
+              onClick={() => setActive(item.id)}
               className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-150 ${
                 isActive
                   ? "bg-accent-emerald text-dark"

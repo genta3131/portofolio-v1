@@ -3,17 +3,16 @@ const works = [
     kind: "Case Study",
     title: "SimRisk: Sistem Manajemen Risiko",
     description:
-      "Platform manajemen risiko skala enterprise untuk Universitas Negeri Jakarta: identifikasi, penilaian, dan pemantauan risiko unit kerja. Dibangun dengan Laravel 12 dan REST API.",
+      "Platform manajemen risiko skala enterprise untuk Universitas Negeri Jakarta: identifikasi, penilaian, dan pemantauan risiko unit kerja. Monolitik Laravel 12 dengan React + Inertia.",
     stack: [
       "Laravel 12",
       "PHP 8.2",
       "MySQL",
-      "REST API",
+      "Inertia.js",
       "Spatie RBAC",
-      "JWT/SSO Microsoft",
     ],
     stats: [
-      { label: "REST endpoints", value: "30+" },
+      { label: "RBAC Roles", value: "4" },
       { label: "Migrations", value: "22" },
     ],
     cta: "Kunjungi repo",

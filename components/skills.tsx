@@ -8,11 +8,11 @@ const skills = [
     span: "md:col-span-2",
   },
   {
-    title: "API & Keamanan",
+    title: "Otorisasi & RBAC",
     description:
-      "REST API 30+ endpoint dengan autentikasi JWT dan SSO Microsoft, akses dikontrol lewat RBAC.",
-    stack: ["REST API", "Spatie RBAC", "JWT", "SSO Microsoft"],
-    tiles: ["API", "RB", "TK", "SSO"],
+      "Otorisasi aplikasi monolitik Laravel: pemetaan role dan permission dengan RBAC Spatie, dilindungi lewat middleware.",
+    stack: ["Spatie RBAC", "Laravel Middleware", "Gates & Policies", "Role Management"],
+    tiles: ["RB", "MW", "GP", "RL"],
     span: "",
   },
   {
@@ -24,11 +24,11 @@ const skills = [
     span: "",
   },
   {
-    title: "DevOps & Tooling",
+    title: "Tooling & Kolaborasi",
     description:
-      "Mengemas aplikasi dengan Docker dan Laravel Sail supaya lingkungan dev konsisten.",
-    stack: ["Docker", "Laravel Sail", "Git"],
-    tiles: ["DK", "SL", "GT"],
+      "Terbiasa bekerja dengan Git: version control, riwayat perubahan rapi, dan dokumentasi proyek.",
+    stack: ["Git", "GitHub", "Dokumentasi"],
+    tiles: ["GT", "GH", "DO"],
     span: "",
   },
   {

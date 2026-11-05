@@ -4,7 +4,7 @@ const experience = [
     org: "PUSTIKOM UNJ",
     period: "2025",
     detail:
-      "Merancang dan mengembangkan SimRisk: REST API 30+ endpoint, 22 migrations, RBAC Spatie, serta autentikasi JWT/SSO Microsoft.",
+      "Merancang dan mengembangkan SimRisk, aplikasi manajemen risiko monolitik dengan Laravel 12 (React + Inertia), 22 migrations, dan RBAC Spatie.",
     current: false,
   },
   {
@@ -24,7 +24,7 @@ const experience = [
     current: false,
   },
   {
-    role: "S1 Pendidikan Informatika",
+    role: "S1 Pendidikan Teknik Informatika & Komputer",
     org: "Universitas Negeri Jakarta",
     period: "2022–2026",
     detail:

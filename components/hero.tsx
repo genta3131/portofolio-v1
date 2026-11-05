@@ -49,10 +49,11 @@ export function Hero() {
               Lihat Proyek
             </a>
             <a
-              href="#kontak"
+              href="/CV_GentaAbdiFathir.pdf"
+              download="CV_GentaAbdiFathir.pdf"
               className="rounded-pill border border-dark-border px-6 py-3 text-sm text-dark-foreground/80 transition-colors duration-150 hover:text-dark-foreground"
             >
-              Unduh Resume
+              Unduh CV
             </a>
           </div>
 

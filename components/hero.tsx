@@ -1,5 +1,8 @@
 /** Hero dark ala v1: aksen emerald, badge status, avatar.
  *  Mobile: foto di atas (seperti udara si Handoko), teks di bawah. */
+import Image from "next/image";
+import gentaPng from "../public/genta.png";
+
 export function Hero() {
   return (
     <section
@@ -20,9 +23,10 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-[100rem] items-center gap-10 px-6 pb-16 pt-20 md:grid-cols-[1.4fr_1fr] md:gap-12 md:pb-20 md:pt-28">
         {/* Foto — pertama di mobile (atas), kanan di desktop */}
         <div className="order-1 justify-self-center md:order-2 md:justify-self-end">
-          <img
-            src="/genta.png"
+          <Image
+            src={gentaPng}
             alt="Genta Abdi Fathir"
+            preload
             className="h-40 w-40 rounded-full border-2 border-accent-emerald/30 object-cover md:h-80 md:w-80"
           />
         </div>

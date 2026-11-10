@@ -53,13 +53,6 @@ function DockIcon({ id }: { id: string }) {
           <path d="M5 9.5V20h5v-6h4v6h5V9.5" />
         </svg>
       );
-    case "tentang":
-      return (
-        <svg {...common}>
-          <circle cx="12" cy="8" r="3.5" />
-          <path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5" />
-        </svg>
-      );
     case "karya":
       return (
         <svg {...common}>

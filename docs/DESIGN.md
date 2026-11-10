@@ -1,5 +1,7 @@
 # naufalsuhandoko DESIGN.md
 
+> Result: this document describes the REFERENCE site (naufalsuhandoko), NOT this project's actual theme. This project uses emerald accent (#10b981-ish tokens) + Geist fonts — see `app/globals.css`. Do NOT copy the #ffe02a / Instrument Sans values here into this project.
+
 > Auto-generated design system — reverse-engineered via static analysis by skillui.
 > Frameworks: None detected
 > Colors: 20 · Fonts: 3 · Components: 6

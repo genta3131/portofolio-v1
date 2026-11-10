@@ -1,7 +1,7 @@
 /** Hero dark ala v1: aksen emerald, badge status, avatar.
  *  Mobile: foto di atas (seperti udara si Handoko), teks di bawah. */
 import Image from "next/image";
-import gentaPng from "../public/genta.png";
+import gentaPng from "../public/genta.webp";
 
 export function Hero() {
   return (

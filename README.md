@@ -24,7 +24,7 @@ components/      section: site-header, dock, hero, about-intro,
                  works, experience, skills, site-footer
                  motion.tsx (Reveal/ProgressBar), use-active-section.ts
 docs/DESIGN.md   refensi desain situs lain (BUIKAN tema proyek ini)
-public/          favicon, genta.png, CV PDF
+public/          favicon, genta.webp, og.png, CV PDF
 ```
 
 ## Navigasi

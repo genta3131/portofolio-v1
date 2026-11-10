@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <ProgressBar />
       <SiteHeader />
-      <main>
+      <main id="konten">
         <Hero />
         <Reveal>
           <AboutIntro />

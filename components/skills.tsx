@@ -1,15 +1,4 @@
-import {
-  siGithub,
-  siGit,
-  siInertia,
-  siLaravel,
-  siMysql,
-  siPhp,
-  siReact,
-  siTailwindcss,
-  siTypescript,
-  type SimpleIcon,
-} from "simple-icons";
+import { BRAND_ICONS, type BrandIcon } from "@/components/tech-icons";
 
 const skills = [
   {
@@ -18,9 +7,9 @@ const skills = [
       "Fokus utama: membangun backend dengan ekosistem Laravel/PHP, dari skema database sampai business logic.",
     stack: ["Laravel 12", "PHP 8.2", "MySQL", "Eloquent"],
     tech: [
-      { label: "Laravel", icon: siLaravel },
-      { label: "PHP", icon: siPhp },
-      { label: "MySQL", icon: siMysql },
+      { label: "Laravel", icon: BRAND_ICONS.Laravel },
+      { label: "PHP", icon: BRAND_ICONS.PHP },
+      { label: "MySQL", icon: BRAND_ICONS.MySQL },
       { label: "Eloquent", mono: "EQ" },
     ],
     span: "md:col-span-2",
@@ -44,10 +33,10 @@ const skills = [
       "Membangun antarmuka yang menyatu dengan backend: komponen React dan styling Tailwind.",
     stack: ["React 19", "TypeScript", "Inertia.js", "Tailwind CSS"],
     tech: [
-      { label: "React", icon: siReact },
-      { label: "TypeScript", icon: siTypescript },
-      { label: "Inertia.js", icon: siInertia },
-      { label: "Tailwind", icon: siTailwindcss },
+      { label: "React", icon: BRAND_ICONS.React },
+      { label: "TypeScript", icon: BRAND_ICONS.TypeScript },
+      { label: "Inertia.js", icon: BRAND_ICONS.Inertiajs },
+      { label: "Tailwind", icon: BRAND_ICONS.TailwindCSS },
     ],
     span: "",
   },
@@ -57,8 +46,8 @@ const skills = [
       "Terbiasa bekerja dengan Git: version control, riwayat perubahan rapi, dan dokumentasi proyek.",
     stack: ["Git", "GitHub", "Dokumentasi"],
     tech: [
-      { label: "Git", icon: siGit },
-      { label: "GitHub", icon: siGithub, light: true },
+      { label: "Git", icon: BRAND_ICONS.Git },
+      { label: "GitHub", icon: BRAND_ICONS.GitHub, light: true },
       { label: "Dokumentasi", mono: "DO" },
     ],
     span: "",
@@ -77,7 +66,7 @@ const skills = [
   },
 ];
 
-type Tech = { label: string; icon?: SimpleIcon; mono?: string; light?: boolean };
+type Tech = { label: string; icon?: BrandIcon; mono?: string; light?: boolean };
 
 /** Tile ikon brand berwarna di atas permukaan gelap; tanpa logo resmi → monogram. */
 function TechTile({ t }: { t: Tech }) {
@@ -113,7 +102,7 @@ function TechTile({ t }: { t: Tech }) {
   );
 }
 
-/** Keahlian: bento + kartu; ikon brand simple-icons di tile gelap. */
+/** Keahlian: bento + kartu; ikon brand (di-vendor) di tile gelap. */
 export function Skills() {
   return (
     <section id="keahlian" className="mx-auto max-w-[100rem] px-6 pb-16 pt-16">

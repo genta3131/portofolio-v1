@@ -53,8 +53,8 @@ export function ProgressBar() {
   return (
     <div className="fixed inset-x-0 top-0 z-50 h-[3px]">
       <div
-        className="h-full bg-accent-emerald"
-        style={{ width: `${Math.round(progress * 100)}%` }}
+        className="h-full w-full bg-accent-emerald"
+        style={{ transform: `scaleX(${progress})`, transformOrigin: "left" }}
       />
     </div>
   );

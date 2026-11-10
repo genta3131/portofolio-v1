@@ -60,6 +60,7 @@
 html {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   scroll-behavior: smooth;
+  color-scheme: dark; /* dark theme → scrollbar & form control native ikut gelap */
 }
 
 body {
@@ -74,9 +75,21 @@ body {
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 .reveal.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Anchor scroll tak tertutup header fixed (desktop) */
+section[id] {
+  scroll-margin-top: 96px;
 }
 
 @keyframes marquee {

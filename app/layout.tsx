@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -35,6 +35,10 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   authors: [{ name: "Genta Abdi Fathir" }],
   keywords: ["Genta Abdi Fathir", "Backend Developer", "Laravel", "PHP", "SimRisk", "portfolio"],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#080b10",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

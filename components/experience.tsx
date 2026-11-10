@@ -23,17 +23,20 @@ const experience = [
       "Merancang prototipe produk digital, termasuk platform relawan & event.",
     current: false,
   },
+];
+
+const education = [
   {
-    role: "S1 Pendidikan Teknik Informatika & Komputer",
+    degree: "S1 Pendidikan Teknik Informatika & Komputer",
     org: "Universitas Negeri Jakarta",
     period: "2022–2026",
     detail:
       "Fokus pada pengembangan perangkat lunak dan sistem informasi; lulus dengan proyek akhir berupa sistem manajemen risiko.",
-    current: false,
   },
 ];
 
-/** Pengalaman: timeline vertikal seperti v1. */
+/** Pengalaman & Pendidikan: dua blok terpisah (mengikuti pola v1).
+ *  Kerja = timeline pencapaian; pendidikan = panel ringkas berbeda bentuk. */
 export function Experience() {
   return (
     <section
@@ -49,7 +52,7 @@ export function Experience() {
             </svg>
           </span>
           <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Pengalaman &amp; Pendidikan
+            Pengalaman Kerja
           </h2>
         </div>
 
@@ -76,6 +79,34 @@ export function Experience() {
                       : "border-border text-muted-foreground"
                   }`}
                 >
+                  {e.period}
+                </span>
+              </div>
+              <p className="mt-1 text-sm font-medium text-foreground">
+                {e.org}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {e.detail}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Pendidikan — panel terpisah, bentuk berbeda dari timeline kerja */}
+        <p className="mt-16 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          Pendidikan
+        </p>
+        <div className="mt-6 max-w-3xl space-y-4">
+          {education.map((e) => (
+            <div
+              key={`${e.org}-${e.period}`}
+              className="rounded-card border border-border bg-card p-6"
+            >
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 className="text-lg font-bold text-foreground">
+                  {e.degree}
+                </h3>
+                <span className="rounded-pill border border-border px-3 py-0.5 font-mono text-xs text-muted-foreground">
                   {e.period}
                 </span>
               </div>

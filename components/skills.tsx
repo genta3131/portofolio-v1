@@ -1,10 +1,28 @@
+import {
+  siGithub,
+  siGit,
+  siInertia,
+  siLaravel,
+  siMysql,
+  siPhp,
+  siReact,
+  siTailwindcss,
+  siTypescript,
+  type SimpleIcon,
+} from "simple-icons";
+
 const skills = [
   {
     title: "Backend Development",
     description:
       "Fokus utama: membangun backend dengan ekosistem Laravel/PHP, dari skema database sampai business logic.",
     stack: ["Laravel 12", "PHP 8.2", "MySQL", "Eloquent"],
-    tiles: ["Lr", "PHP", "DB", "EQ"],
+    tech: [
+      { label: "Laravel", icon: siLaravel },
+      { label: "PHP", icon: siPhp },
+      { label: "MySQL", icon: siMysql },
+      { label: "Eloquent", mono: "EQ" },
+    ],
     span: "md:col-span-2",
   },
   {
@@ -12,7 +30,12 @@ const skills = [
     description:
       "Otorisasi aplikasi monolitik Laravel: pemetaan role dan permission dengan RBAC Spatie, dilindungi lewat middleware.",
     stack: ["Spatie RBAC", "Laravel Middleware", "Gates & Policies", "Role Management"],
-    tiles: ["RB", "MW", "GP", "RL"],
+    tech: [
+      { label: "Spatie RBAC", mono: "RB" },
+      { label: "Middleware", mono: "MW" },
+      { label: "Gates & Policies", mono: "GP" },
+      { label: "Role Management", mono: "RL" },
+    ],
     span: "",
   },
   {
@@ -20,7 +43,12 @@ const skills = [
     description:
       "Membangun antarmuka yang menyatu dengan backend: komponen React dan styling Tailwind.",
     stack: ["React 19", "TypeScript", "Inertia.js", "Tailwind CSS"],
-    tiles: ["Rc", "TS", "IN", "TW"],
+    tech: [
+      { label: "React", icon: siReact },
+      { label: "TypeScript", icon: siTypescript },
+      { label: "Inertia.js", icon: siInertia },
+      { label: "Tailwind", icon: siTailwindcss },
+    ],
     span: "",
   },
   {
@@ -28,7 +56,11 @@ const skills = [
     description:
       "Terbiasa bekerja dengan Git: version control, riwayat perubahan rapi, dan dokumentasi proyek.",
     stack: ["Git", "GitHub", "Dokumentasi"],
-    tiles: ["GT", "GH", "DO"],
+    tech: [
+      { label: "Git", icon: siGit },
+      { label: "GitHub", icon: siGithub, light: true },
+      { label: "Dokumentasi", mono: "DO" },
+    ],
     span: "",
   },
   {
@@ -36,12 +68,52 @@ const skills = [
     description:
       "Terbiasa menjelaskan materi teknis ke audiens awal, dari ruang kelas sampai dokumentasi proyek.",
     stack: ["Mengajar", "Public speaking", "Dokumentasi"],
-    tiles: ["TR", "PS", "DO"],
+    tech: [
+      { label: "Mengajar", mono: "TR" },
+      { label: "Public speaking", mono: "PS" },
+      { label: "Dokumentasi", mono: "DO" },
+    ],
     span: "",
   },
 ];
 
-/** Keahlian: bento + kartu monogram, gaya v1 (rounded-lg, border halus). */
+type Tech = { label: string; icon?: SimpleIcon; mono?: string; light?: boolean };
+
+/** Tile ikon brand berwarna di atas permukaan gelap; tanpa logo resmi → monogram. */
+function TechTile({ t }: { t: Tech }) {
+  if (!t.icon) {
+    return (
+      <li
+        className="flex h-10 w-10 items-center justify-center rounded-lg bg-dark-card font-mono text-xs font-medium text-accent-emerald"
+        title={t.label}
+      >
+        {t.mono}
+      </li>
+    );
+  }
+  // GitHub hitam tak terbaca di tile gelap → pakai token foreground terang.
+  const color = t.light ? "var(--dark-foreground)" : `#${t.icon.hex}`;
+  return (
+    <li
+      className="flex h-10 w-10 items-center justify-center rounded-lg bg-dark-card"
+      title={t.label}
+    >
+      <svg
+        role="img"
+        aria-label={t.label}
+        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        fill={color}
+      >
+        <title>{t.label}</title>
+        <path d={t.icon.path} />
+      </svg>
+    </li>
+  );
+}
+
+/** Keahlian: bento + kartu; ikon brand simple-icons di tile gelap. */
 export function Skills() {
   return (
     <section id="keahlian" className="mx-auto max-w-[100rem] px-6 pb-16 pt-16">
@@ -64,13 +136,8 @@ export function Skills() {
             className={`flex flex-col rounded-card border border-border bg-card p-6 hover:border-accent-emerald/50 ${s.span}`}
           >
             <ul className="flex flex-wrap gap-2">
-              {s.tiles.map((t) => (
-                <li
-                  key={t}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-dark-card font-mono text-xs font-medium text-accent-emerald"
-                >
-                  {t}
-                </li>
+              {s.tech.map((t) => (
+                <TechTile key={t.label} t={t} />
               ))}
             </ul>
             <ul className="mt-4 flex flex-wrap gap-2">

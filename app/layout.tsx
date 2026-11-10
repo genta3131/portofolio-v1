@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gentaabdi-portofolio.vercel.app"),
   title: "Genta Abdi Fathir — Backend Developer",
   description:
     "Portfolio Genta Abdi Fathir: backend developer Laravel/PHP, pembangun SimRisk (sistem manajemen risiko enterprise). Jakarta, Indonesia.",
